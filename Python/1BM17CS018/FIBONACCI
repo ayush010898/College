@@ -1,13 +1,14 @@
+    
 def fibonacci(n):
    if n <= 1:
        return n
    else:
        return(fibonacci(n-1) + fibonacci(n-2))
 
-terms = int(input("enter numbers to generate "))
-if terms <= 0:
+num = int(input("enter numbers to generate "))
+if num <= 0:
    print("enter a positive integer")
 else:
    print("Fibonacci sequence is:")
-   for i in range(terms):
+   for i in range(num):
        print(fibonacci(i))
