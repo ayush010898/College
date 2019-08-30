@@ -4,6 +4,14 @@ def Reverse(string):
     list1 = ' '.join(list1)
     return list1
 
-phrase = input('enter string ')
+def reverseChar(s): 
+  str = "" 
+  for i in s: 
+    str = i + str
+  return str
+
+phrase = input("enter string ")
 reverseString = Reverse(phrase)
-print(reverseString)
+print(reverseString) 
+print ("The reversed string is ") 
+print (reverseChar(reverseString))
