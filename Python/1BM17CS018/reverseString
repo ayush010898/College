@@ -4,6 +4,6 @@ def Reverse(string):
     list1 = ' '.join(list1)
     return list1
 
-question = input('Please enter a phrase ')
-answer = Reverse(question)
-print(answer)
+phrase = input('enter string ')
+reverseString = Reverse(phrase)
+print(reverseString)
