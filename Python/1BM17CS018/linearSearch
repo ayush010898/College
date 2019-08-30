@@ -5,12 +5,17 @@ def search(list,n):
             return True
     return False
   
-list = [1, 2, 'sachin', 4,'Geeks', 6] 
+list=[]
+n = int(input("enter number of elemnts in list:"))
+for i in range(0,n):
+    ele=int(input())
+    list.append(ele)
+
   
 
-n = 'Geeks'
+searchNum = int(input("enter number to search"))
   
-if search(list, n): 
+if search(list, searchNum): 
     print("Found") 
 else: 
     print("Not Found")
