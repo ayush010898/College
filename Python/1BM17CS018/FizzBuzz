@@ -1,4 +1,4 @@
-for fizzbuzz in range(50):
+for fizzbuzz in range (50):
     if fizzbuzz % 3 == 0 and fizzbuzz % 5 == 0:
         print("fizzbuzz")
         continue
@@ -8,5 +8,5 @@ for fizzbuzz in range(50):
     elif fizzbuzz % 5 == 0:
         print("buzz")
         continue
-        
     print(fizzbuzz)
+
