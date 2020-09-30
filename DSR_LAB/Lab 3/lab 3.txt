@@ -1,0 +1,30 @@
+3(a)
+list.files()
+getwd()
+bank_data <- read.csv("C:/labDSR/bank-data.xls")
+bank_data
+sampbanks<-na.exclude(bank_data)
+sampbanks
+head(bank_data)
+summary(bank_data)
+dim(bank_data)
+ncol(bank_data)
+nrow(bank_data)
+str(bank_data)
+colnames(bank_data)
+plot(bank_data)
+p1 <- ggplot() + geom_line(aes(y = income, x = children),data = bank_data)
+p1
+plot(bank_data[,'income'],bank_data[,'children'])
+
+
+3(b)
+getwd()
+setwd("C:/Program Files/RStudio/R/Dataset")
+getwd()
+sales_delim <- read.delim("Mar_Basket_Software.xls",sep = ',')
+sales_delim
+vec <- c(2,3,4,5,6)
+data3 <- sales_delim
+data3 <- cbind(sales_delim,Size = vec)
+data3
