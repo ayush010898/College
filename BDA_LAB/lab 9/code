@@ -1,19 +1,19 @@
 7 Write Queries in Hive to do the following
 1.	Create an external table named with the following attributes -> Empl_ID ->Emp_Name -> Designation -> Salary
-CREATE DATABASE IF NOT EXISTS lab9 COMMENT 'employee program' WITH DBPROPERTIES ('creator'='CHANDANA');
+CREATE DATABASE IF NOT EXISTS lab9 COMMENT 'employee program' WITH DBPROPERTIES ('creator'='Ayush');
 SHOW DATABASES;
 DESCRIBE DATABASE lab9; 
 USE lab9;
 CREATE EXTERNAL TABLE IF NOT EXISTS Employee(EmpID INT,EmpName STRING,Designation STRING,Salary FLOAT) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
 2.	Load data into table from a given file 
-LOAD DATA LOCAL INPATH '/home/chandana/Desktop/employeeInput.txt' OVERWRITE INTO TABLE Employee;
+LOAD DATA LOCAL INPATH '/home/ayush/Desktop/employeeInput.txt' OVERWRITE INTO TABLE Employee;
 SELECT * FROM Employee;
 3.	Create a view to Generate a query to retrieve the employee details who earn a salary of more than Rs 30000. 
 CREATE VIEW emp_30000 AS SELECT * FROM Employee WHERE Salary>30000;
 SELECT * FROM emp_30000;
 4.	Alter the table to add a column Dept_Id and Generate a query to retrieve the employee details in order by using Dept_Id 
 ALTER TABLE Employee ADD COLUMNS(DeptID INT);
-LOAD DATA LOCAL INPATH '/home/chandana/Desktop/employeeInputAltered.txt' OVERWRITE INTO TABLE Employee;
+LOAD DATA LOCAL INPATH '/home/ayush/Desktop/employeeInputAltered.txt' OVERWRITE INTO TABLE Employee;
 SELECT * FROM Employee;
 SELECT * FROM Employee ORDER BY DeptID;
 5.	Generate a query to retrieve the number of employees in each department whose salary is greater than 30000 
